@@ -11,7 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<ImageButton>(R.id.imageButton).setOnClickListener{_ -> finish()}
-        findViewById<Button>(R.id.button2).setOnClickListener { _ -> startActivity(Intent(this, Auth::class.java))}
+        findViewById<Button>(R.id.button2).setOnClickListener { _ -> val inte = Intent(this, Auth::class.java)
+            inte.putExtra("fragment", "login")
+            startActivity(inte)}
+        findViewById<Button>(R.id.button).setOnClickListener { _ -> val inte = Intent(this, Auth::class.java)
+            inte.putExtra("fragment", "reg")
+            startActivity(inte)}
         actionBar?.hide()
         supportActionBar?.hide()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

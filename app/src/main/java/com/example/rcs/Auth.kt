@@ -3,9 +3,10 @@ package com.example.rcs
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class login : AppCompatActivity() {
+class Auth : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_auth)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 }
